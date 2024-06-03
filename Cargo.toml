@@ -1,0 +1,29 @@
+[package]
+name = "tokio-rmp-codec"
+description = "Integration between tokio-codec and rmp-serde (serde for MessagePack/msgpack)"
+version = "1.0.0"
+edition = "2021"
+authors = ["Eny Tarunaditya <tarun.aditya@hotmail.com>"]
+license = "MIT"
+homepage = "https://github.com/enygmator/tokio-rmp-codec"
+repository = "https://github.com/enygmator/tokio-rmp-codec"
+readme = "README.md"
+
+[dependencies]
+bytes = "1.6.0"
+serde = "1.0"
+rmp-serde = "1.3.0"
+thiserror = "1.0"
+tokio-util = { version = "0.7.10", features = ["codec"] }
+tracing = "0.1"
+
+[dev-dependencies]
+tokio = { version = "^1.37.0", features = ["rt", "macros", "rt-multi-thread"] }
+# futures = "^0.3.30"
+# maplit = "^1.0.2"
+serde = { version = "^1.0", features = ["derive"] }
+serde_bytes = "0.11"
+test-log = { version = "0.2.16", features = ["trace"] }
+tokio-test = "0.4.4"
+tokio-stream = "0.1.15"
+maplit = "1.0.2"
